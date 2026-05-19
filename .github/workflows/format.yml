@@ -18,4 +18,4 @@ jobs:
         uses: axel-op/googlejavaformat-action@v3
         with:
           args: "--dry-run --set-exit-if-changed"
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}   # was: githubToken
