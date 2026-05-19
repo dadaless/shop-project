@@ -7,13 +7,13 @@ import vendure.model.ProductList;
 
 public class ProductsQuery extends GraphQlQuery<ProductList> {
 
-    @Override
-    public String buildQuery() {
-        return "query { products { items { id name slug description } totalItems } }";
-    }
+  @Override
+  public String buildQuery() {
+    return "query { products { items { id name slug description } totalItems } }";
+  }
 
-    @Override
-    public ProductList parseResult(JsonNode dataNode, ObjectMapper mapper) throws Exception {
-        return mapper.treeToValue(dataNode.get("products"), ProductList.class);
-    }
+  @Override
+  public ProductList parseResult(JsonNode dataNode, ObjectMapper mapper) throws Exception {
+    return mapper.treeToValue(dataNode.get("products"), ProductList.class);
+  }
 }
